@@ -31,3 +31,18 @@
     transform: rotateY(90deg);
     transition-delay: 0s;
 }
+
+
+@media all and (max-width: 900px) {
+    .card .front {
+        height: 7rem;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .card .front {
+        height: 5.5rem;
+
+    }
+   
+}

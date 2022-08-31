@@ -1,6 +1,6 @@
 .App {
   max-width: 80%;
-  margin: 40px auto;
+  margin: 2% auto;
 }
 
 .title {
@@ -47,6 +47,16 @@ button:hover {
   .card-grid {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    margin-top: 14%;
+    grid-row-gap: 15%;
+  }
+
+  .title {
+    margin: 12% 0;
+  }
+
+  button {
+    margin: 2%;
   }
 }
 
@@ -54,6 +64,15 @@ button:hover {
   .card-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 8%;
   }
 
+  .title {
+    font-size: 200%;
+  }
+
+  button {
+    font-size: 0.7em;
+    margin: 0;
+  }
 }
