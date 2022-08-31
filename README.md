@@ -15,4 +15,3 @@ Para probarlo:
 
 <br></br>
 
-Credito: bradtraversy
