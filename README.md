@@ -7,11 +7,8 @@ Se trata de un juego clasico de memoria, adaptado a el mundial de futbol de qata
 
 <br></br>
 
-
-Para probarlo:
-1. Descargá el repo
-2. En la consola: 'npm install'
-3. En la consola: 'npm start'
+¿Querés jugar? 
+https://memory-game-qatar.vercel.app/
 
 <br></br>
 
