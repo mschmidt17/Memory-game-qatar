@@ -27,11 +27,16 @@
     border-radius: 100px; 
 }
 
+
 .flipped .back {
     transform: rotateY(90deg);
     transition-delay: 0s;
 }
 
+
+
+
+/*RESPONSIVE*/
 
 @media all and (max-width: 900px) {
     .card .front {

@@ -16,6 +16,8 @@ import img10 from "./img/uruguay.png"
 import img11 from "./img/tunez.png"
 import img12 from "./img/francia.png"
 
+import congrats from  "./img/congrats.gif"
+
 
 
 
@@ -41,6 +43,7 @@ export default function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [win, setWin] = useState([])
 
   
   const shuffleCards = () => {
@@ -52,6 +55,7 @@ export default function App() {
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
+    setWin([])
   }
 
   const handleChoice = (card) => {
@@ -62,7 +66,6 @@ export default function App() {
   useEffect(() => {
     shuffleCards()
   }, [])
-
 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
@@ -81,6 +84,7 @@ export default function App() {
       } else {
         setTimeout(() => resetTurn(), 1000);
       }
+      setWin(cards.filter(c => c.matched === false))
     }
   }, [choiceOne, choiceTwo])
 
@@ -93,6 +97,7 @@ export default function App() {
 
   return (
     <div className="App">
+      { win.length === 2? <img src={congrats} alt='congratulations!!!' className='congrats'/> : null }
       <h1 className='title'>Qatar 2022</h1>
       <button onClick={shuffleCards}>New Game</button>
       <p>Turns: {turns}</p>
