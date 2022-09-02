@@ -1,11 +1,14 @@
 import './singleCard.css'
 import rihla from "../img/rihla-training.png"
 
-export default function SingleCard({ card, handleChoice, cardFlipped, disabled }) {    
+export default function SingleCard({ card, handleChoice, cardFlipped, disabled, clicks, setClicks }) {    
     const handleClick = () => {
-        if (!disabled) {
-            handleChoice(card);
-        }
+        if(clicks !== card.id) {
+            if (!disabled) {
+                handleChoice(card);
+                setClicks(card.id)
+            }
+        }        
     }
 
     return (

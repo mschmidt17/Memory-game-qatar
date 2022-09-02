@@ -44,7 +44,7 @@ export default function App() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [win, setWin] = useState([])
-
+  const [clicks, setClicks] = useState(0)
   
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]      
@@ -59,7 +59,8 @@ export default function App() {
   }
 
   const handleChoice = (card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)        
+    console.log(card)
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)   
   }
 
   
@@ -109,6 +110,8 @@ export default function App() {
             handleChoice={handleChoice}
             cardFlipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
+            clicks={clicks}
+            setClicks={setClicks}
           />
         ))}
       </div>
