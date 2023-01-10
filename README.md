@@ -2,7 +2,8 @@
 
 Se trata de un juego clasico de memoria, adaptado a el mundial de futbol de qatar 2022.
 
-
+La aplicacion se desarrollo utilizando React, JavaScript, HTML y CSS.
+<br></br>
 #50 days of code 💻
 
 <br></br>
